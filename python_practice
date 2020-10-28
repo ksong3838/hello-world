@@ -1,3 +1,33 @@
+# 리스트 안에 과일 개수가 몇 개 들어있는지 세는 프로그램
+fruit = ["사과", "사과", "바나나", "딸기", "키위", "복숭아", "복숭아", "복숭아"]
+
+
+#1
+from collections import Counter
+fruitSort = Counter(fruit)
+print(fruitSort)
+
+#2
+i=0
+fruit_sort={}
+while i < len(fruit):
+  
+  if fruit[i] not in fruit_sort:
+     fruit_sort[fruit[i]]=1
+  
+  else :
+    fruit_sort[fruit[i]]=fruit_sort[fruit[i]]+1
+    
+  i=i+1
+  print(fruit_sort)
+
+   
+print(fruit)
+print(fruit_sort)
+
+
+
+#인사 프로그램
 # 먼저 이름과 나이를 받아라
 # 나이가 10살 미만이면 "안녕" 이라고 말해라
 # 나이가 10살에서 20살 사이면 "안녕하세요"라고 말해라

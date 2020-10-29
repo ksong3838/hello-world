@@ -26,6 +26,18 @@ print(fruit)
 print(fruit_sort)
 
 
+# 풀이법 3
+fs = {}
+
+for i in fruit:
+  if i in fs: # "사과" 라는 key 가 fs라는 딕셔너리에 들어있는지 확인한다.
+    fs[i] = fs[i] + 1 # 들어있다면, "사과"의 갯수를 한 개 올린다.
+  else:
+    fs[i] = 1 # 만약 "사과" 가 없다면, 그걸 딕셔너리에 넣고 벨류는 1로 만든다. 
+
+print(fs)
+
+
 
 #인사 프로그램
 # 먼저 이름과 나이를 받아라

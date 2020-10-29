@@ -1,0 +1,28 @@
+# class == 함수와 변수들의 함
+# object == class를 이용해서 만들어 낸 물체. 
+
+#class == 빵틀
+#object == 빵틀을 이용해서 찍어내는 빵
+#object == instance 라고도 불림
+
+#예제
+'''  
+Person이라는 class를 제작하기
+클래스는 함수와 변수들의 합.
+우선 변 수 없이 함수 1개만 있는 Person Class를 제작
+'''
+
+class person:
+  def __init__(self, name, age):
+      self.name = name 
+      self.age = str(age) 
+
+  def say_hello(self, to_name):
+    print("안녕! " + to_name + " 나는 " + self.name)
+
+  def introduce(self):
+    print("내 이름은 " + self.name + " 그리고 나는 " + self.age + " 살이야")
+
+
+willow = person("willow", 20)
+willow.introduce()

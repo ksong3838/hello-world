@@ -26,3 +26,23 @@ class person:
 
 willow = person("willow", 20)
 willow.introduce()
+class Police(person):  # 폴리스라는 클래스가 펄슨이라는 클래스를 상속하는 것. 그래서 person에서 쓰는 함수들을 다 쓸 수 있는 것. 
+  def arrest(self, to_arrest):
+    print("넌 체포됐다, " + to_arrest)
+    
+class Programmer(person):
+  def program(self, to_program):
+    print("다음엔 뭘 만들지? 아 이걸 만들어야겠다: " + to_program)
+
+willow = person("willow", 20)
+jenny = Police("제니", 21)
+michael = Programmer("마이클", 22)
+
+willow.introduce()
+jenny.introduce()
+michael.introduce()
+jenny.arrest("willow")
+michael.program("이메일 클라이언트")
+
+willow.arrest("제니") # 윌로우가 폴리스가 아니기 때문에 어레스트 사용 불가
+michael.arrest("제니") #마이클이 어레스트라는 속성이 없기 떄문에 불가
